@@ -50,10 +50,10 @@
 
 
     <!-- ========================================
-         主体内容区域 - 三栏布局
+         主体内容区域
          ======================================== -->
     <section class="main-content" id="home">
-        <div class="main-container">
+        <div class="content-wrapper">
             
             <!-- 左侧：个人资料卡片 -->
             <aside class="profile-sidebar">
@@ -87,8 +87,40 @@
                 </div>
             </aside>
 
-            <!-- 中间：个人介绍 -->
-            <div class="content-center">
+            <!-- 右侧：工作经历（固定在右侧） -->
+            <aside class="experience-sidebar">
+                <div class="section-header">
+                    <h2>工作经历</h2>
+                    <p>Experience</p>
+                </div>
+                <div class="experience-list">
+                    <div class="exp-item">
+                        <div class="exp-period">2024.11 - 2025.09</div>
+                        <div class="exp-company">北京智谱华章科技股份有限公司</div>
+                        <div class="exp-position">数字人技术算法实习生</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-period">2024.08 - 2024.09</div>
+                        <div class="exp-company">咪咕视频 · 巴黎奥运会项目</div>
+                        <div class="exp-position">赛事数据封装演播实习生</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-period">2022.02 - 2022.04</div>
+                        <div class="exp-company">北京冬奥会、冬残奥会 · OBS转播公司</div>
+                        <div class="exp-position">BTP转播技术培训项目实习生</div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-period">2021.07 - 2021.08</div>
+                        <div class="exp-company">中视实业集团 · 东京奥运会央视技术支持</div>
+                        <div class="exp-position">技术支持场记实习生</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 中间主内容区 -->
+            <div class="content-main">
+                
+                <!-- 个人介绍区块 -->
                 <div class="intro-section" id="about">
                     <h1>段傲然 Oran Duan</h1>
                     <p class="intro-title">中国传媒大学 · 信号与信息处理硕士研究生</p>
@@ -232,7 +264,7 @@
                         <h2>荣誉奖项</h2>
                         <p>Honors & Awards</p>
                     </div>
-                    <div class="honors-list">
+                    <div class="honors-grid">
                         <div class="honor-item">
                             <span class="honor-year">2024-2025</span>
                             <span class="honor-title">研究生国家奖学金</span>
@@ -243,11 +275,11 @@
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2023</span>
-                            <span class="honor-title">毕业生优秀学生干部（本专科生）</span>
+                            <span class="honor-title">毕业生优秀学生干部</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2019-2023</span>
-                            <span class="honor-title">三学年 国家励志奖学金</span>
+                            <span class="honor-title">三学年国家励志奖学金</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2019-2020</span>
@@ -259,23 +291,19 @@
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2021</span>
-                            <span class="honor-title">第十八届首都高校"风采之星"才艺大赛亚军</span>
+                            <span class="honor-title">首都高校"风采之星"亚军</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2021</span>
-                            <span class="honor-title">第十二届蓝桥杯C/C++组北京赛区三等奖</span>
+                            <span class="honor-title">蓝桥杯C/C++组北京赛区三等奖</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2022</span>
-                            <span class="honor-title">第八届"互联网＋"创新创业大赛北京赛区三等奖</span>
+                            <span class="honor-title">"互联网＋"创新创业大赛北京赛区三等奖</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2022</span>
-                            <span class="honor-title">北京冬奥会OBS奥运转播服务</span>
-                        </div>
-                        <div class="honor-item">
-                            <span class="honor-year">2022</span>
-                            <span class="honor-title">北京冬残奥会OBS奥运转播服务</span>
+                            <span class="honor-title">北京冬奥会/冬残奥会OBS转播服务</span>
                         </div>
                         <div class="honor-item">
                             <span class="honor-year">2023</span>
@@ -334,59 +362,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 右侧：工作经历 -->
-            <aside class="experience-sidebar">
-                <div class="section-header">
-                    <h2>工作经历</h2>
-                    <p>Experience</p>
-                </div>
-                <div class="experience-list">
-                    <div class="exp-item">
-                        <div class="exp-period">2024.11 - 2025.09</div>
-                        <div class="exp-company">北京智谱华章科技股份有限公司</div>
-                        <div class="exp-position">数字人技术算法实习生</div>
-                    </div>
-                    <div class="exp-item">
-                        <div class="exp-period">2024.08 - 2024.09</div>
-                        <div class="exp-company">咪咕视频 · 巴黎奥运会项目</div>
-                        <div class="exp-position">赛事数据封装演播实习生</div>
-                    </div>
-                    <div class="exp-item">
-                        <div class="exp-period">2022.02 - 2022.04</div>
-                        <div class="exp-company">北京冬奥会、冬残奥会 · OBS转播公司</div>
-                        <div class="exp-position">BTP转播技术培训项目实习生</div>
-                    </div>
-                    <div class="exp-item">
-                        <div class="exp-period">2021.07 - 2021.08</div>
-                        <div class="exp-company">中视实业集团 · 东京奥运会央视技术支持</div>
-                        <div class="exp-position">技术支持场记实习生</div>
+                <!-- 点击数 -->
+                <div class="section-block visitor-section">
+                    <div class="visitor-counter">
+                        <i class="fas fa-eye"></i>
+                        <span class="counter-label">Visits</span>
+                        <span class="counter-number">
+                            <span id="busuanzi_container_site_pv">
+                                <span id="busuanzi_value_site_pv"></span>
+                            </span>
+                        </span>
                     </div>
                 </div>
-            </aside>
+            </div>
 
         </div>
     </section>
-
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="visitor-counter">
-            <i class="fas fa-eye"></i>
-            <span class="counter-label">Visits</span>
-            <span class="counter-number">
-                <span id="busuanzi_container_site_pv">
-                    <span id="busuanzi_value_site_pv"></span>
-                </span>
-            </span>
-        </div>
-        <p>&copy; 2024 Oran Duan. Built with simplicity and passion.</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="https://github.com/OranDuanStudy" target="_blank">GitHub</a> |
-            <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank">ResearchGate</a>
-        </p>
-    </footer>
 
 
     <!-- JavaScript 文件 -->
