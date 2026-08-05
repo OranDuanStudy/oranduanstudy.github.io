@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/hero.css">
-    <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="assets/css/awards.css">
-    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/publications.css">
+    <link rel="stylesheet" href="assets/css/certificates.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/contact.css">
 </head>
@@ -30,8 +29,8 @@
             <a href="#home" class="nav-logo">段傲然 / Oran Duan</a>
             <ul class="nav-links">
                 <li><a href="#about">关于</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#awards">奖项</a></li>
+                <li><a href="#publications">论文</a></li>
+                <li><a href="#certificates">荣誉</a></li>
 
                 <li><a href="#gallery">生活</a></li>
                 <li><a href="#contact">联系</a></li>
@@ -150,223 +149,265 @@
     </section>
 
 
-    <!-- ========================================
-         项目
-         ======================================== -->
-    <section class="projects" id="projects">
+    <section class="publications" id="publications">
         <div class="container">
             <div class="section-header">
-                <h2>项目</h2>
-                <p>Projects</p>
+                <h2 data-i18n="pub.title">学术成果</h2>
+                <p>Publications</p>
             </div>
-            <div class="project-list">
-
-                <!-- Project 1: LRCM -->
-                <div class="project-item">
-                    <div class="project-thumb">
-                        <img src="./assets/images/LRCM.png" alt="LRCM">
-                    </div>
-                    <div class="project-body">
-                        <div class="project-title">LRCM: Listen to Rhythm, Choose Movements</div>
-                        <div class="project-desc">自回归多模态舞蹈生成，结合扩散模型与 Mamba，解耦舞蹈数据集。</div>
-                        <div class="project-tags">3D动作生成 · 扩散模型 · Mamba</div>
-                        <div class="project-links">
-                            <a href="https://github.com/OranDuanStudy/LRCM" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://oranduanstudy.github.io/LRCM" target="_blank"><i class="fas fa-link"></i> Project Page</a>
-                            <a href="https://arxiv.org/abs/2601.03323" target="_blank"><i class="ai ai-arxiv"></i> arXiv</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: INFilm -->
-                <div class="project-item">
-                    <div class="project-thumb">
+            <div class="pub-list">
+                <!-- 论文 1 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
                         <img src="./assets/images/INFilm_paper.png" alt="INFilm">
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">InteractiveFilm-CharacterDailyAgent</div>
-                        <div class="project-desc">基于多智能体的 AI 驱动交互式电影角色内容生成系统。</div>
-                        <div class="project-tags">Multi-Agent · LLM · AIGC</div>
-                        <div class="project-links">
-                            <a href="https://github.com/OranDuanStudy/InteractiveFilm-CharacterDailyAgent" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <div class="pub-content">
+                        <div class="pub-title">An AI-Driven Multi-Agent System for Automated Character Content Generation</div>
+                        <div class="pub-authors">
+                            <span class="me">O. Duan</span>
+                        </div>
+                        <div class="pub-venue">
+                            <i class="fab fa-github"></i> GitHub
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://github.com/OranDuanStudy/InteractiveFilm-CharacterDailyAgent" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" title="Preprints.org">
+                                <i class="ai ai-archive"></i> Preprints.org (Coming Soon)
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: Peking Opera -->
-                <div class="project-item">
-                    <div class="project-thumb">
-                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs40494-024-01463-3/MediaObjects/40494_2024_1463_Fig1_HTML.png" alt="Peking Opera">
+                <!-- 论文 2 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
+                        <img src="./assets/images/LRCM.png" alt="LRCM">
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">京剧脸谱合成 (Heritage Science)</div>
-                        <div class="project-desc">基于 co-training 与条件 StyleGAN2 的风格化京剧脸谱图像生成。</div>
-                        <div class="project-tags">StyleGAN · 图像生成 · 风格迁移</div>
-                        <div class="project-links">
-                            <a href="https://doi.org/10.1186/s40494-024-01463-3" target="_blank"><i class="ai ai-springer"></i> Springer</a>
-                            <a href="https://www.nature.com/articles/s40494-024-01463-3.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF</a>
+                    <div class="pub-content">
+                        <div class="pub-title">Listen to Rhythm, Choose Movements: Autoregressive Multimodal Dance Generation via Diffusion and Mamba with Decoupled Dance Dataset</div>
+                        <div class="pub-authors">
+                            <span class="me">O. Duan</span>, Y. Shen, Y. Lv, L. Jie, Y. Liu, Q. Wu
+                        </div>
+                        <div class="pub-venue">
+                            <i class="ai ai-arxiv"></i> arXiv preprint | 2026
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2601.03323" target="_blank" title="arXiv">
+                                <i class="ai ai-arxiv"></i> arXiv
+                            </a>
+                            <a href="https://github.com/OranDuanStudy/LRCM" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://oranduanstudy.github.io/LRCM" target="_blank" title="Project Page">
+                                <i class="fas fa-link"></i> Project Page
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4: CUC-Badminton -->
-                <div class="project-item">
-                    <div class="project-thumb">
-                        <img src="./assets/images/portrait.png" alt="CUC Badminton">
+                <!-- 专利 3 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
+                        <img src="./assets/images/portrait.png" alt="Digital Human Patent">
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">CUC-Badminton 羽毛球场自动预约</div>
-                        <div class="project-desc">基于 Selenium 的中传羽毛球场自动预约脚本。</div>
-                        <div class="project-tags">Python · Selenium · 自动化</div>
-                        <div class="project-links">
-                            <a href="https://github.com/OranDuanStudy/CUC-Badminton" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <div class="pub-content">
+                        <div class="pub-title">数字人口型驱动方法、装置及电子设备 <span style="font-size: 0.85em; color: #888;">Digital Human Lip-Sync Driving Method, Device and Electronic Equipment</span></div>
+                        <div class="pub-authors">
+                            L. Jie, <span class="me">O. Duan</span>
+                        </div>
+                        <div class="pub-venue">
+                            <i class="fas fa-certificate"></i> China Invention Patent | CN121334459A | 2026
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://pss-system.cponline.cnipa.gov.cn/conventionalSearch" target="_blank" title="CNIPA">
+                                <i class="fas fa-certificate"></i> CNIPA
+                            </a>
+                            <span style="font-size: 0.85em; color: #888;">Patent No.: CN202511425699.0</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 5: Fitness Dance Scoring -->
-                <div class="project-item">
-                    <div class="project-thumb">
-                        <img src="./assets/images/dance_paper.png" alt="Fitness Dance">
+                <!-- 论文 4 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
+                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs40494-024-01463-3/MediaObjects/40494_2024_1463_Fig1_HTML.png" alt="Peking Opera Facial Makeup">
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">Fitness Dance 健身舞蹈评分系统</div>
-                        <div class="project-desc">基于人体姿态识别的健身舞蹈自动评分系统 (IEEE ICSIP 2023)。</div>
-                        <div class="project-tags">姿态估计 · 评分系统 · IEEE</div>
-                        <div class="project-links">
-                            <a href="https://ieeexplore.ieee.org/document/10270872" target="_blank"><i class="ai ai-ieee"></i> IEEE Xplore</a>
+                    <div class="pub-content">
+                        <div class="pub-title">Styled and characteristic Peking opera facial makeup synthesis with co-training and transfer conditional StyleGAN2</div>
+                        <div class="pub-authors">
+                            Y. Shen, <span class="me">O. Duan</span>, X. Xin, M. Yan, Z. Li
+                        </div>
+                        <div class="pub-venue">
+                            <i class="ai ai-springer"></i> Heritage Science, 12(1):358 | 2024
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://doi.org/10.1186/s40494-024-01463-3" target="_blank" title="npj">
+                                <i class="ai ai-springer"></i> npj
+                            </a>
+                            <a href="https://www.nature.com/articles/s40494-024-01463-3.pdf" target="_blank" title="PDF">
+                                <i class="far fa-file-pdf"></i> PDF
+                            </a>
+                            <a href="https://www.researchgate.net/publication/381732185" target="_blank" title="ResearchGate">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Patent -->
-                <div class="project-item">
-                    <div class="project-thumb">
-                        <img src="./assets/images/portrait.png" alt="Patent">
+                <!-- 论文 5 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
+                        <img src="./assets/images/dance_paper.png" alt="IEEE">
                     </div>
-                    <div class="project-body">
-                        <div class="project-title">数字人口型驱动方法、装置及电子设备</div>
-                        <div class="project-desc">中国发明专利 CN121334459A，专利号 CN202511425699.0。</div>
-                        <div class="project-tags">数字人 · 口型同步 · 专利</div>
-                        <div class="project-links">
-                            <a href="https://pss-system.cponline.cnipa.gov.cn/conventionalSearch" target="_blank"><i class="fas fa-certificate"></i> CNIPA</a>
+                    <div class="pub-content">
+                        <div class="pub-title">Design and Implementation of Fitness Dance Scoring System Based on Human Posture Recognition</div>
+                        <div class="pub-authors">
+                            X. Ruan, Y. Lyu, <span class="me">O. Duan</span>
+                        </div>
+                        <div class="pub-venue">
+                            <i class="ai ai-ieee"></i> IEEE Intl Conf. on Signal and Image Processing (ICSIP) | 2023
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://ieeexplore.ieee.org/document/10270872" target="_blank" title="IEEE Xplore">
+                                <i class="ai ai-ieee"></i> IEEE Xplore
+                            </a>
+                            <a href="https://www.researchgate.net/publication/374565124" target="_blank" title="ResearchGate">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
-    <!-- ========================================
-         奖项
-         ======================================== -->
-    <section class="awards" id="awards">
+    <section class="certificates" id="certificates">
         <div class="container">
             <div class="section-header">
-                <h2>奖项</h2>
+                <h2 data-i18n="honor.title">荣誉奖项</h2>
                 <p>Honors & Awards</p>
             </div>
-            <div class="awards-list">
-                <div class="award-item">
-                    <span class="award-year">2024-2025</span>
-                    <span class="award-title">研究生国家奖学金</span>
+            <div class="honors-list">
+                <div class="honor-item">
+                    <span class="honor-year">2024-2025</span>
+                    <span class="honor-title">研究生国家奖学金</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2023</span>
-                    <span class="award-title">北京市优秀毕业生</span>
+                <div class="honor-item">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-title">北京市优秀毕业生</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2023</span>
-                    <span class="award-title">毕业生优秀学生干部</span>
+                <div class="honor-item">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-title">毕业生优秀学生干部（本专科生）</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2019-2023</span>
-                    <span class="award-title">三学年 国家励志奖学金</span>
+                <div class="honor-item">
+                    <span class="honor-year">2019-2023</span>
+                    <span class="honor-title">三学年 国家励志奖学金</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2019-2020</span>
-                    <span class="award-title">中国传媒大学优秀学生干部</span>
+                <div class="honor-item">
+                    <span class="honor-year">2019-2020</span>
+                    <span class="honor-title">中国传媒大学优秀学生干部</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2020-2021</span>
-                    <span class="award-title">中国传媒大学优秀团员</span>
+                <div class="honor-item">
+                    <span class="honor-year">2020-2021</span>
+                    <span class="honor-title">中国传媒大学优秀团员</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2021</span>
-                    <span class="award-title">第十八届首都高校"风采之星"才艺大赛亚军</span>
+                <div class="honor-item">
+                    <span class="honor-year">2021</span>
+                    <span class="honor-title">第十八届首都高校"风采之星"才艺大赛亚军</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2021</span>
-                    <span class="award-title">第十二届蓝桥杯 C/C++ 组北京赛区三等奖</span>
+                <div class="honor-item">
+                    <span class="honor-year">2021</span>
+                    <span class="honor-title">第十二届蓝桥杯C/C++组北京赛区三等奖</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2022</span>
-                    <span class="award-title">第八届"互联网＋"创新创业大赛北京赛区三等奖</span>
+                <div class="honor-item">
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title">第八届"互联网＋"创新创业大赛北京赛区三等奖</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2022</span>
-                    <span class="award-title">北京冬奥会 OBS 奥运转播服务</span>
+                <div class="honor-item">
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title">北京冬奥会OBS奥运转播服务</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2022</span>
-                    <span class="award-title">北京冬残奥会 OBS 奥运转播服务</span>
+                <div class="honor-item">
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title">北京冬残奥会OBS奥运转播服务</span>
                 </div>
-                <div class="award-item">
-                    <span class="award-year">2023</span>
-                    <span class="award-title">大学生创新创业实践良好结项</span>
+                <div class="honor-item">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-title">大学生创新创业实践良好结项</span>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <!-- ========================================
-         生活照片
-         ======================================== -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
-                <h2>生活照片</h2>
+                <h2 data-i18n="gallery.title">生活照片</h2>
                 <p>Photo Gallery</p>
             </div>
             <div class="gallery-scroll">
-                <div class="gallery-item"><img src="assets/images/1.jpg" alt="Photo 1"></div>
-                <div class="gallery-item"><img src="assets/images/2.jpg" alt="Photo 2"></div>
-                <div class="gallery-item"><img src="assets/images/3.jpg" alt="Photo 3"></div>
-                <div class="gallery-item"><img src="assets/images/4.jpg" alt="Photo 4"></div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ========================================
-         联系我
-         ======================================== -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>联系我</h2>
-                <p>Get in Touch</p>
-            </div>
-            <div class="contact-content">
-                <p>欢迎与我讨论研究合作、学术交流，或潜在的就业机会。如有任何问题，请随时通过邮件联系我。</p>
-                <div class="contact-links">
-                    <a href="mailto:oranduan@cuc.edu.cn"><i class="fas fa-envelope"></i> oranduan@cuc.edu.cn</a>
-                    <a href="https://github.com/OranDuanStudy" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
-                    <a href="https://www.instagram.com/oran_duan" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <div class="gallery-item">
+                    <img src="assets/images/1.jpg" alt="Photo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/2.jpg" alt="Photo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/3.jpg" alt="Photo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/4.jpg" alt="Photo 4">
                 </div>
             </div>
         </div>
     </section>
+
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contact.title">联系我</h2>
+                <p>Get in Touch</p>
+            </div>
+            <div class="contact-content">
+                <p data-i18n="contact.desc">
+                    欢迎与我讨论研究合作、学术交流，或潜在的就业机会。
+                    如有任何问题，请随时通过邮件联系我。
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:oranduan@cuc.edu.cn">
+                        <i class="fas fa-envelope"></i>
+                        oranduan@cuc.edu.cn
+                    </a>
+                    <a href="https://github.com/OranDuanStudy" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank">
+                        <i class="fab fa-researchgate"></i>
+                        ResearchGate
+                    </a>
+                    <a href="https://www.instagram.com/oran_duan" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
     <!-- ========================================
          页脚
          ======================================== -->
-    <footer>
+        <footer>
         <div class="visitor-counter">
             <i class="fas fa-eye"></i>
             <span class="counter-label">Visits</span>
