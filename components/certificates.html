@@ -1,0 +1,35 @@
+<!-- ========================================
+     证书展示组件 - Certificates Component
+     使用方法: 将此代码复制到页面的主要内容区
+     ======================================== -->
+
+<section class="certificates" id="certificates">
+    <div class="container">
+        <div class="section-header">
+            <h2>荣誉奖项</h2>
+            <p>Honors & Awards</p>
+        </div>
+        <div class="cert-grid">
+            <!-- 证书卡片示例 - 请根据实际证书文件修改 -->
+            <div class="cert-card" onclick="openModal('assets/images/证书文件名.jpg')">
+                <div class="cert-image">
+                    <img src="assets/images/证书文件名.jpg" alt="国家励志奖学金">
+                </div>
+                <div class="cert-content">
+                    <h4>国家励志奖学金</h4>
+                    <p>2021年</p>
+                </div>
+            </div>
+
+            <!-- 更多证书卡片... -->
+        </div>
+    </div>
+</section>
+
+<!-- 图片查看模态框 -->
+<div class="modal" id="imageModal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="证书预览">
+    </div>
+</div>

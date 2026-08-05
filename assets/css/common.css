@@ -1,0 +1,252 @@
+/* ========================================
+   通用样式文件 - Common Styles
+   ======================================== */
+
+/* CSS 变量定义 - 暗黑哥特风 */
+:root {
+    --primary-color: #8b5cf6;
+    --secondary-color: #6d28d9;
+    --accent-color: #dc2626;
+    --text-dark: #e2e8f0;
+    --text-light: #94a3b8;
+    --text-gray: #64748b;
+    --bg-dark: #0a0a0f;
+    --bg-darker: #050508;
+    --bg-light: #1a1a2e;
+    --bg-white: #16161a;
+    --border-color: #2d2d3a;
+    --gothic-purple: #4c1d95;
+    --gothic-red: #7f1d1d;
+    --gothic-gold: #b45309;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: var(--text-dark);
+    background: var(--bg-dark);
+}
+
+/* 通用容器 */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* 通用区块样式 */
+section {
+    padding: 6rem 2rem;
+}
+
+/* 区块标题 */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* 卡片样式 */
+.card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.1);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* 徽章样式 */
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #c4b5fd;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+/* 技能标签 */
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    border-color: var(--primary-color);
+    background: rgba(139, 92, 246, 0.1);
+    box-shadow: var(--shadow-glow);
+}
+
+/* 链接样式 */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #c4b5fd;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: var(--bg-darker);
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    color: #c4b5fd;
+    text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+/* 浏览量计数器 */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-white) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(139, 92, 246, 0.2);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.visitor-counter:hover {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7), 0 0 25px rgba(139, 92, 246, 0.4);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.visitor-counter i {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.5));
+}
+
+.visitor-counter .counter-label {
+    color: var(--text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.visitor-counter .counter-number {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+    min-width: 2rem;
+    text-align: center;
+}
+
+/* 隐藏不蒜子链接和默认样式 */
+#busuanzi_container_site_pv a,
+#busuanzi_value_site_pv {
+    color: inherit !important;
+    text-decoration: none !important;
+}

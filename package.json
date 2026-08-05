@@ -1,0 +1,6 @@
+{
+  "name": "oran-chatbot-api",
+  "version": "1.0.0",
+  "description": "AI Chatbot API for Cloudflare Workers",
+  "type": "module"
+}
