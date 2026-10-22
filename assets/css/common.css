@@ -6,21 +6,28 @@
 :root {
     --primary-color: #8b5cf6;
     --secondary-color: #6d28d9;
-    --accent-color: #dc2626;
-    --text-dark: #e2e8f0;
-    --text-light: #94a3b8;
-    --text-gray: #64748b;
-    --bg-dark: #0a0a0f;
-    --bg-darker: #050508;
-    --bg-light: #1a1a2e;
-    --bg-white: #16161a;
-    --border-color: #2d2d3a;
+    --accent-color: #b91c1c;
+    --text-dark: #e7e2f0;
+    --text-light: #a39cb4;
+    --text-gray: #6b6480;
+    --bg-dark: #0a0910;
+    --bg-darker: #050408;
+    --bg-light: #13111c;
+    --bg-white: #16141f;
+    --border-color: #2c2838;
     --gothic-purple: #4c1d95;
     --gothic-red: #7f1d1d;
-    --gothic-gold: #b45309;
+    --gothic-gold: #c9a45c;
+    --lilac: #c4b5fd;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+    --shadow-glow: 0 0 22px rgba(139, 92, 246, 0.28);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+    /* 字体：拉丁字母用 Cinzel / Cormorant，中文用思源宋体，均有系统衬线回退 */
+    --font-display: 'Cinzel', 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
+    --font-serif: 'EB Garamond', 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+    --font-body: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+    --font-mono: 'EB Garamond', 'Courier New', monospace;
 }
 
 /* 全局样式 */
@@ -30,11 +37,34 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.7;
+    font-family: var(--font-body);
+    line-height: 1.75;
     color: var(--text-dark);
     background: var(--bg-dark);
+    -webkit-font-smoothing: antialiased;
+    /* 衬线字体默认是旧式数字，日期统一用等高数字更易读 */
+    font-variant-numeric: lining-nums;
+}
+
+/* 英文界面：正文使用更合适的西文衬线 */
+html[data-lang="en"] body {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 锚点跳转时避开固定导航栏 */
+section {
+    padding: 6rem 2rem;
+    scroll-margin-top: 64px;
 }
 
 /* 通用容器 */
@@ -44,31 +74,74 @@ body {
     padding: 0 2rem;
 }
 
-/* 通用区块样式 */
-section {
-    padding: 6rem 2rem;
-}
-
-/* 区块标题 */
+/* 区块标题：带哥特式装饰线与十字纹 */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .section-header h2 {
-    font-size: 2.25rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    text-shadow: 0 0 14px rgba(139, 92, 246, 0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 1.1rem;
+}
+
+.section-header h2::before,
+.section-header h2::after {
+    content: '';
+    width: 64px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color));
+}
+
+.section-header h2::after {
+    background: linear-gradient(90deg, var(--primary-color), transparent);
 }
 
 .section-header p {
+    margin-top: 0.4rem;
     color: var(--text-light);
+    font-family: var(--font-serif);
+    font-style: italic;
     font-size: 1.1rem;
+    letter-spacing: 1px;
 }
+
+.section-header p::before,
+.section-header p::after {
+    content: '✠';
+    color: var(--accent-color);
+    font-style: normal;
+    font-size: 0.8rem;
+    margin: 0 0.7rem;
+    opacity: 0.85;
+}
+
+/* 哥特式描边框：四角十字饰 */
+.gothic-frame {
+    position: relative;
+}
+
+.gothic-frame::before,
+.gothic-frame::after {
+    content: '✠';
+    position: absolute;
+    top: 8px;
+    font-size: 0.75rem;
+    color: rgba(185, 28, 28, 0.75);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.gothic-frame::before { left: 10px; }
+.gothic-frame::after { right: 10px; }
 
 /* 卡片样式 */
 .card {
@@ -85,66 +158,21 @@ section {
     border-color: var(--primary-color);
 }
 
-/* 按钮样式 */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.btn:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn-outline:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
 /* 徽章样式 */
 .badge {
     display: inline-block;
-    padding: 0.4rem 1rem;
-    background: rgba(139, 92, 246, 0.2);
-    border: 1px solid rgba(139, 92, 246, 0.4);
+    padding: 0.3rem 0.85rem;
+    background: rgba(139, 92, 246, 0.14);
+    border: 1px solid rgba(139, 92, 246, 0.35);
     border-radius: 20px;
-    font-size: 0.85rem;
-    color: #c4b5fd;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    font-size: 0.82rem;
+    color: var(--lilac);
+    transition: all 0.3s ease;
 }
 
-/* 技能标签 */
-.skill-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.skill-tag:hover {
-    border-color: var(--primary-color);
-    background: rgba(139, 92, 246, 0.1);
-    box-shadow: var(--shadow-glow);
+.badge:hover {
+    background: rgba(139, 92, 246, 0.28);
+    transform: translateY(-2px);
 }
 
 /* 链接样式 */
@@ -155,8 +183,14 @@ a {
 }
 
 a:hover {
-    color: #c4b5fd;
+    color: var(--lilac);
     text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--lilac);
+    outline-offset: 3px;
 }
 
 /* 响应式 */
@@ -170,7 +204,13 @@ a:hover {
     }
 
     .section-header h2 {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
+        gap: 0.7rem;
+    }
+
+    .section-header h2::before,
+    .section-header h2::after {
+        width: 32px;
     }
 }
 
@@ -187,12 +227,16 @@ footer p {
     font-size: 0.9rem;
 }
 
+footer .footer-links {
+    margin-top: 0.5rem;
+}
+
 footer a {
     color: var(--primary-color);
 }
 
 footer a:hover {
-    color: #c4b5fd;
+    color: var(--lilac);
     text-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
 }
 

@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oran Duan - Homepage</title>
+    <title>段傲然 Oran Duan | 个人主页</title>
+    <meta name="description" content="段傲然 Oran Duan — 深度学习算法工程师 @ 其域创新 XGRIDS · 中国传媒大学 信号与信息处理 硕士。Deep Learning Algorithm Engineer at XGRIDS.">
+    <meta name="theme-color" content="#07060b">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- 字体：非阻塞加载，加载失败时回退到系统衬线字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="print" onload="this.media='all'"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap">
 
     <!-- Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,164 +35,224 @@
          ======================================== -->
     <nav>
         <div class="nav-container">
-            <a href="#home" class="nav-logo">段傲然 / Oran Duan</a>
+            <a href="#home" class="nav-logo">段傲然 <span class="nav-logo-sep">✠</span> Oran Duan</a>
             <ul class="nav-links">
-                <li><a href="#about">关于</a></li>
-                <li><a href="#publications">论文</a></li>
-                <li><a href="#certificates">荣誉</a></li>
-
-                <li><a href="#gallery">生活</a></li>
-                <li><a href="#contact">联系</a></li>
+                <li><a href="#home" data-i18n="nav.about">关于</a></li>
+                <li><a href="#publications" data-i18n="nav.publications">论文</a></li>
+                <li><a href="#certificates" data-i18n="nav.certificates">荣誉</a></li>
+                <li><a href="#gallery" data-i18n="nav.gallery">生活</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">联系</a></li>
             </ul>
             <div class="nav-right">
-                <div class="menu-toggle">
+                <button type="button" class="lang-toggle" id="langToggle" aria-label="切换语言 / Switch language">
+                    <span class="lang-current">中</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-other">EN</span>
+                </button>
+                <button type="button" class="menu-toggle" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
 
 
     <!-- ========================================
-         顶部三栏：左(人物) | 中上(介绍) | 右(实习)
+         顶部三栏：左(人物/教育) | 中(介绍) | 右(经历)
          ======================================== -->
     <section class="hero" id="home">
         <div class="hero-container">
 
-            <!-- 左：人物卡片（仅教育背景） -->
+            <!-- 左：人物卡片（头像 + 教育背景） -->
             <div class="hero-image">
-                <div class="profile-card">
+                <div class="profile-card gothic-frame">
                     <div class="profile-avatar">
-                        <img src="assets/images/avatar.jpg" alt="Oran Duan">
+                        <img src="assets/images/DAR1-avatar.jpg" alt="段傲然 Oran Duan">
                     </div>
                     <div class="profile-info">
-                        <h3>段傲然 Oran Duan</h3>
-                        <p>中国传媒大学</p>
-                        <p>信息与通信工程学院</p>
-                        <p class="edu-item">本科 · 数字媒体技术 (2019-2023)</p>
-                        <p class="edu-item">硕士 · 信号与信息处理 (2023-2026)</p>
+                        <h3>段傲然 <span>Oran Duan</span></h3>
+                        <img class="school-logo" src="assets/images/logos/cuc-white.svg" alt="中国传媒大学 Communication University of China">
+                        <p class="school-name" data-i18n="edu.school">信息与通信工程学院</p>
+                        <ul class="edu-list">
+                            <li class="edu-item">
+                                <span class="edu-degree" data-i18n="edu.master">硕士 · 信号与信息处理</span>
+                                <span class="edu-time">2023 – 2026</span>
+                            </li>
+                            <li class="edu-item">
+                                <span class="edu-degree" data-i18n="edu.bachelor">本科 · 数字媒体技术</span>
+                                <span class="edu-time">2019 – 2023</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- 中上：个人介绍 -->
+            <!-- 中：个人介绍 -->
             <div class="hero-content">
-                <h1>段傲然 Oran Duan</h1>
-                <p class="title">中国传媒大学 · 信号与信息处理硕士研究生</p>
+                <h1>段傲然 <span class="hero-name-en">Oran Duan</span></h1>
+                <p class="title">
+                    <span data-i18n="hero.position">深度学习算法工程师</span>
+                    <span class="title-at">@</span>
+                    <span class="title-company" data-i18n="hero.company">其域创新 XGRIDS</span>
+                </p>
+                <p class="subtitle" data-i18n="hero.subtitle">中国传媒大学 · 信号与信息处理硕士（2026 届）</p>
+
                 <div class="hero-intro">
                     <div class="intro-item">
-                        <strong>本科毕设</strong>
-                        <span>基于ORB-SLAM算法与Unity实现增强现实系统</span>
+                        <strong data-i18n="hero.research">研究方向</strong>
+                        <div class="hero-badges">
+                            <span class="badge" data-i18n="badge.dl">深度学习</span>
+                            <span class="badge" data-i18n="badge.cv">计算机视觉</span>
+                            <span class="badge" data-i18n="badge.gen">生成式模型</span>
+                            <span class="badge" data-i18n="badge.dh">数字人</span>
+                            <span class="badge" data-i18n="badge.motion">3D 动作生成</span>
+                            <span class="badge" data-i18n="badge.agent">AI Agent</span>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <strong data-i18n="hero.master">硕士课题</strong>
+                        <span data-i18n="hero.masterDesc">多模态自回归舞蹈动作生成</span>
+                        <span class="intro-tags" data-i18n="hero.masterTags">3D 动作生成 · 扩散模型 · Mamba · 多模态</span>
+                    </div>
+                    <div class="intro-item">
+                        <strong data-i18n="hero.bachelor">本科毕设</strong>
+                        <span data-i18n="hero.bachelorDesc">基于 ORB-SLAM 与 Unity 的增强现实系统</span>
                         <span class="intro-tags">SLAM · AR · Unity</span>
                     </div>
                     <div class="intro-item">
-                        <strong>硕士毕设</strong>
-                        <span>多模态自回归舞蹈动作生成模型</span>
-                        <span class="intro-tags">3D动作生成 · 扩散模型 · 多模态</span>
-                    </div>
-                    <div class="intro-item">
-                        <strong>研究方向</strong>
-                        <span>深度学习 · 计算机视觉 · 生成式模型 · 图像生成 · 数字人 · 3D舞蹈动作生成 · Agent</span>
-                    </div>
-                    <div class="intro-item">
-                        <strong>兴趣爱好</strong>
-                        <span>街舞 · 羽毛球 · 健身 · 游戏 · 欢迎交流！</span>
+                        <strong data-i18n="hero.interests">兴趣爱好</strong>
+                        <span data-i18n="hero.interestsDesc">街舞 · 羽毛球 · 健身 · 游戏 —— 欢迎交流！</span>
                     </div>
                 </div>
-                <div class="hero-badges">
-                    <span class="badge">深度学习</span>
-                    <span class="badge">计算机视觉</span>
-                    <span class="badge">生成式模型</span>
-                    <span class="badge">AIGC</span>
-                    <span class="badge">数字人</span>
-                    <span class="badge">3D动作生成</span>
-                </div>
+
                 <div class="hero-social">
-                    <a href="https://github.com/OranDuanStudy" target="_blank" title="GitHub">
+                    <a href="https://github.com/OranDuanStudy" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank" title="ResearchGate">
+                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank" rel="noopener" title="ResearchGate" aria-label="ResearchGate">
                         <i class="fab fa-researchgate"></i>
                     </a>
-                    <a href="https://www.instagram.com/oran_duan" target="_blank" title="Instagram">
+                    <a href="https://www.instagram.com/oran_duan" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="mailto:oranduan@cuc.edu.cn" title="Email">
+                    <a href="mailto:oran.duan@xgrids.com" title="Email" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- 右侧：实习岗位 -->
-            <div class="hero-internships">
-                <div class="internships-title">
-                    <i class="fas fa-briefcase"></i> 实习经历
+            <!-- 右：工作 & 实习经历 -->
+            <aside class="hero-experience gothic-frame" aria-labelledby="exp-title">
+                <div class="exp-panel-title" id="exp-title">
+                    <i class="fas fa-briefcase"></i>
+                    <span data-i18n="exp.title">经历</span>
+                    <small data-i18n="exp.titleSub">Experience</small>
                 </div>
-                <ul class="internship-list">
-                    <li class="internship-item">
-                        <div class="internship-role">数字人技术算法实习生</div>
-                        <div class="internship-company">智谱华章</div>
-                        <div class="internship-time">2024.11 - 2025.09</div>
-                    </li>
-                    <li class="internship-item">
-                        <div class="internship-role">赛事数据封装演播实习生</div>
-                        <div class="internship-company">咪咕视频</div>
-                        <div class="internship-time">2024.08 - 2024.09</div>
-                    </li>
-                    <li class="internship-item">
-                        <div class="internship-role">BTP 转播技术培训项目实习生</div>
-                        <div class="internship-company">OBS 奥运转播公司</div>
-                        <div class="internship-time">2022.02 - 2022.04</div>
-                    </li>
-                    <li class="internship-item">
-                        <div class="internship-role">技术支持场记实习生</div>
-                        <div class="internship-company">中视实业集团</div>
-                        <div class="internship-time">2021.07 - 2021.08</div>
-                    </li>
-                </ul>
-            </div>
+
+                <!-- 工作 -->
+                <div class="exp-group-label" data-i18n="exp.work">工作</div>
+                <article class="exp-card is-current">
+                    <div class="exp-logo">
+                        <img src="assets/images/logos/xgrids.png" alt="XGRIDS logo">
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-company" data-i18n="exp.xgrids.company">其域创新 XGRIDS</div>
+                        <div class="exp-role">
+                            <span data-i18n="exp.xgrids.role">深度学习算法工程师</span>
+                        </div>
+                        <div class="exp-time"><span class="exp-tag tag-fulltime" data-i18n="tag.fulltime">全职</span> 2026.07 – <span data-i18n="time.present">至今</span></div>
+                    </div>
+                </article>
+
+                <!-- 实习 -->
+                <div class="exp-group-label" data-i18n="exp.intern">实习</div>
+
+                <article class="exp-card">
+                    <div class="exp-logo">
+                        <img src="assets/images/logos/zhipu.png" alt="Zhipu AI logo">
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-company" data-i18n="exp.zhipu.company">智谱 Zhipu AI</div>
+                        <ul class="exp-roles">
+                            <li>
+                                <div class="exp-role">
+                                    <span data-i18n="exp.zhipu.role1">Agent 产品工程实习生</span>
+                                </div>
+                                <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2025.12 – 2026.03</div>
+                            </li>
+                            <li>
+                                <div class="exp-role">
+                                    <span data-i18n="exp.zhipu.role2">数字人算法实习生</span>
+                                </div>
+                                <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2024.11 – 2025.11</div>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="exp-card">
+                    <div class="exp-logo">
+                        <img src="assets/images/logos/migu.ico" alt="MIGU Video logo">
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-company" data-i18n="exp.migu.company">咪咕视频 MIGU Video</div>
+                        <div class="exp-role">
+                            <span data-i18n="exp.migu.role">演播室赛事数据包装实习生</span>
+                        </div>
+                        <div class="exp-note" data-i18n="exp.migu.note">2024 巴黎奥运会</div>
+                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2024.08 – 2024.09</div>
+                    </div>
+                </article>
+
+                <article class="exp-card">
+                    <div class="exp-logo">
+                        <img src="assets/images/logos/obs.svg" alt="Olympic Broadcasting Services logo">
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-company" data-i18n="exp.obs.company">奥林匹克转播服务公司 OBS</div>
+                        <div class="exp-role">
+                            <span data-i18n="exp.obs.role">BTP 转播培训实习生 · 场馆联络官</span>
+                        </div>
+                        <div class="exp-note" data-i18n="exp.obs.note">北京 2022 冬奥会 / 冬残奥会</div>
+                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2022.02 – 2022.04</div>
+                    </div>
+                </article>
+
+                <article class="exp-card">
+                    <div class="exp-logo logo-wide">
+                        <img src="assets/images/logos/ctvig.jpg" alt="China Television Industrial Group logo">
+                    </div>
+                    <div class="exp-body">
+                        <div class="exp-company" data-i18n="exp.ctvig.company">中视实业集团（央视）</div>
+                        <div class="exp-role">
+                            <span data-i18n="exp.ctvig.role">技术支持场记实习生</span>
+                        </div>
+                        <div class="exp-note" data-i18n="exp.ctvig.note">东京奥运会 · 央视转播技术支持</div>
+                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2021.07 – 2021.08</div>
+                    </div>
+                </article>
+            </aside>
 
         </div>
     </section>
 
 
+    <!-- ========================================
+         学术成果
+         ======================================== -->
     <section class="publications" id="publications">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="pub.title">学术成果</h2>
-                <p>Publications</p>
+                <p data-i18n="pub.sub">Publications &amp; Patents</p>
             </div>
             <div class="pub-list">
                 <!-- 论文 1 -->
                 <div class="pub-item">
                     <div class="pub-thumbnail">
-                        <img src="./assets/images/INFilm_paper.png" alt="INFilm">
-                    </div>
-                    <div class="pub-content">
-                        <div class="pub-title">An AI-Driven Multi-Agent System for Automated Character Content Generation</div>
-                        <div class="pub-authors">
-                            <span class="me">O. Duan</span>
-                        </div>
-                        <div class="pub-venue">
-                            <i class="fab fa-github"></i> GitHub
-                        </div>
-                        <div class="pub-links">
-                            <a href="https://github.com/OranDuanStudy/InteractiveFilm-CharacterDailyAgent" target="_blank" title="GitHub">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="#" title="Preprints.org">
-                                <i class="ai ai-archive"></i> Preprints.org (Coming Soon)
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 论文 2 -->
-                <div class="pub-item">
-                    <div class="pub-thumbnail">
-                        <img src="./assets/images/LRCM.png" alt="LRCM">
+                        <img src="./assets/images/LRCM.png" alt="LRCM" loading="lazy">
                     </div>
                     <div class="pub-content">
                         <div class="pub-title">Listen to Rhythm, Choose Movements: Autoregressive Multimodal Dance Generation via Diffusion and Mamba with Decoupled Dance Dataset</div>
@@ -194,14 +263,35 @@
                             <i class="ai ai-arxiv"></i> arXiv preprint | 2026
                         </div>
                         <div class="pub-links">
-                            <a href="https://arxiv.org/abs/2601.03323" target="_blank" title="arXiv">
+                            <a href="https://arxiv.org/abs/2601.03323" target="_blank" rel="noopener" title="arXiv">
                                 <i class="ai ai-arxiv"></i> arXiv
                             </a>
-                            <a href="https://github.com/OranDuanStudy/LRCM" target="_blank" title="GitHub">
+                            <a href="https://github.com/OranDuanStudy/LRCM" target="_blank" rel="noopener" title="GitHub">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="https://oranduanstudy.github.io/LRCM" target="_blank" title="Project Page">
-                                <i class="fas fa-link"></i> Project Page
+                            <a href="https://oranduanstudy.github.io/LRCM" target="_blank" rel="noopener" title="Project Page">
+                                <i class="fas fa-link"></i> <span data-i18n="pub.projectPage">项目主页</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 论文 2 -->
+                <div class="pub-item">
+                    <div class="pub-thumbnail">
+                        <img src="./assets/images/INFilm_paper.png" alt="INFilm" loading="lazy">
+                    </div>
+                    <div class="pub-content">
+                        <div class="pub-title">An AI-Driven Multi-Agent System for Automated Character Content Generation</div>
+                        <div class="pub-authors">
+                            <span class="me">O. Duan</span>
+                        </div>
+                        <div class="pub-venue">
+                            <i class="fab fa-github"></i> <span data-i18n="pub.openSource">开源项目</span> | Preprints.org <span data-i18n="pub.comingSoon">（即将发布）</span>
+                        </div>
+                        <div class="pub-links">
+                            <a href="https://github.com/OranDuanStudy/InteractiveFilm-CharacterDailyAgent" target="_blank" rel="noopener" title="GitHub">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -210,21 +300,24 @@
                 <!-- 专利 3 -->
                 <div class="pub-item">
                     <div class="pub-thumbnail">
-                        <img src="./assets/images/portrait.png" alt="Digital Human Patent">
+                        <img src="./assets/images/portrait.png" alt="Digital Human Patent" loading="lazy">
                     </div>
                     <div class="pub-content">
-                        <div class="pub-title">数字人口型驱动方法、装置及电子设备 <span style="font-size: 0.85em; color: #888;">Digital Human Lip-Sync Driving Method, Device and Electronic Equipment</span></div>
+                        <div class="pub-title">
+                            <span data-i18n="pub.patentTitle">数字人口型驱动方法、装置及电子设备</span>
+                            <span class="pub-title-alt" data-i18n="pub.patentTitleAlt">Digital Human Lip-Sync Driving Method, Device and Electronic Equipment</span>
+                        </div>
                         <div class="pub-authors">
                             L. Jie, <span class="me">O. Duan</span>
                         </div>
                         <div class="pub-venue">
-                            <i class="fas fa-certificate"></i> China Invention Patent | CN121334459A | 2026
+                            <i class="fas fa-certificate"></i> <span data-i18n="pub.patentType">中国发明专利</span> | CN121334459A | 2026
                         </div>
                         <div class="pub-links">
-                            <a href="https://pss-system.cponline.cnipa.gov.cn/conventionalSearch" target="_blank" title="CNIPA">
+                            <a href="https://pss-system.cponline.cnipa.gov.cn/conventionalSearch" target="_blank" rel="noopener" title="CNIPA">
                                 <i class="fas fa-certificate"></i> CNIPA
                             </a>
-                            <span style="font-size: 0.85em; color: #888;">Patent No.: CN202511425699.0</span>
+                            <span class="pub-meta"><span data-i18n="pub.appNo">申请号</span>: CN202511425699.0</span>
                         </div>
                     </div>
                 </div>
@@ -232,7 +325,7 @@
                 <!-- 论文 4 -->
                 <div class="pub-item">
                     <div class="pub-thumbnail">
-                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs40494-024-01463-3/MediaObjects/40494_2024_1463_Fig1_HTML.png" alt="Peking Opera Facial Makeup">
+                        <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs40494-024-01463-3/MediaObjects/40494_2024_1463_Fig1_HTML.png" alt="Peking Opera Facial Makeup" loading="lazy">
                     </div>
                     <div class="pub-content">
                         <div class="pub-title">Styled and characteristic Peking opera facial makeup synthesis with co-training and transfer conditional StyleGAN2</div>
@@ -243,13 +336,13 @@
                             <i class="ai ai-springer"></i> Heritage Science, 12(1):358 | 2024
                         </div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1186/s40494-024-01463-3" target="_blank" title="npj">
-                                <i class="ai ai-springer"></i> npj
+                            <a href="https://doi.org/10.1186/s40494-024-01463-3" target="_blank" rel="noopener" title="DOI">
+                                <i class="ai ai-springer"></i> <span data-i18n="pub.paper">论文</span>
                             </a>
-                            <a href="https://www.nature.com/articles/s40494-024-01463-3.pdf" target="_blank" title="PDF">
+                            <a href="https://www.nature.com/articles/s40494-024-01463-3.pdf" target="_blank" rel="noopener" title="PDF">
                                 <i class="far fa-file-pdf"></i> PDF
                             </a>
-                            <a href="https://www.researchgate.net/publication/381732185" target="_blank" title="ResearchGate">
+                            <a href="https://www.researchgate.net/publication/381732185" target="_blank" rel="noopener" title="ResearchGate">
                                 <i class="fab fa-researchgate"></i> ResearchGate
                             </a>
                         </div>
@@ -259,7 +352,7 @@
                 <!-- 论文 5 -->
                 <div class="pub-item">
                     <div class="pub-thumbnail">
-                        <img src="./assets/images/dance_paper.png" alt="IEEE">
+                        <img src="./assets/images/dance_paper.png" alt="Fitness Dance Scoring System" loading="lazy">
                     </div>
                     <div class="pub-content">
                         <div class="pub-title">Design and Implementation of Fitness Dance Scoring System Based on Human Posture Recognition</div>
@@ -267,13 +360,13 @@
                             X. Ruan, Y. Lyu, <span class="me">O. Duan</span>
                         </div>
                         <div class="pub-venue">
-                            <i class="ai ai-ieee"></i> IEEE Intl Conf. on Signal and Image Processing (ICSIP) | 2023
+                            <i class="ai ai-ieee"></i> IEEE Intl. Conf. on Signal and Image Processing (ICSIP) | 2023
                         </div>
                         <div class="pub-links">
-                            <a href="https://ieeexplore.ieee.org/document/10270872" target="_blank" title="IEEE Xplore">
+                            <a href="https://ieeexplore.ieee.org/document/10270872" target="_blank" rel="noopener" title="IEEE Xplore">
                                 <i class="ai ai-ieee"></i> IEEE Xplore
                             </a>
-                            <a href="https://www.researchgate.net/publication/374565124" target="_blank" title="ResearchGate">
+                            <a href="https://www.researchgate.net/publication/374565124" target="_blank" rel="noopener" title="ResearchGate">
                                 <i class="fab fa-researchgate"></i> ResearchGate
                             </a>
                         </div>
@@ -284,115 +377,121 @@
     </section>
 
 
+    <!-- ========================================
+         荣誉奖项（按时间倒序）
+         ======================================== -->
     <section class="certificates" id="certificates">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="honor.title">荣誉奖项</h2>
-                <p>Honors & Awards</p>
+                <p data-i18n="honor.sub">Honors &amp; Awards</p>
             </div>
             <div class="honors-list">
-                <div class="honor-item">
-                    <span class="honor-year">2024-2025</span>
-                    <span class="honor-title">研究生国家奖学金</span>
+                <div class="honor-item highlight">
+                    <span class="honor-year">2024 – 2025</span>
+                    <span class="honor-title" data-i18n="honor.h1">研究生国家奖学金</span>
+                </div>
+                <div class="honor-item highlight">
+                    <span class="honor-year">2023</span>
+                    <span class="honor-title" data-i18n="honor.h2">北京市优秀毕业生</span>
                 </div>
                 <div class="honor-item">
                     <span class="honor-year">2023</span>
-                    <span class="honor-title">北京市优秀毕业生</span>
+                    <span class="honor-title" data-i18n="honor.h3">本科毕业生优秀学生干部</span>
                 </div>
                 <div class="honor-item">
                     <span class="honor-year">2023</span>
-                    <span class="honor-title">毕业生优秀学生干部（本专科生）</span>
+                    <span class="honor-title" data-i18n="honor.h4">大学生创新创业训练项目 · 良好结项</span>
                 </div>
                 <div class="honor-item">
-                    <span class="honor-year">2019-2023</span>
-                    <span class="honor-title">三学年 国家励志奖学金</span>
+                    <span class="honor-year">2019 – 2023</span>
+                    <span class="honor-title" data-i18n="honor.h5">国家励志奖学金（三学年）</span>
                 </div>
                 <div class="honor-item">
-                    <span class="honor-year">2019-2020</span>
-                    <span class="honor-title">中国传媒大学优秀学生干部</span>
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title" data-i18n="honor.h6">第八届"互联网+"大学生创新创业大赛 北京赛区三等奖</span>
                 </div>
                 <div class="honor-item">
-                    <span class="honor-year">2020-2021</span>
-                    <span class="honor-title">中国传媒大学优秀团员</span>
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title" data-i18n="honor.h7">北京冬奥会 OBS 奥运转播服务</span>
+                </div>
+                <div class="honor-item">
+                    <span class="honor-year">2022</span>
+                    <span class="honor-title" data-i18n="honor.h8">北京冬残奥会 OBS 奥运转播服务</span>
                 </div>
                 <div class="honor-item">
                     <span class="honor-year">2021</span>
-                    <span class="honor-title">第十八届首都高校"风采之星"才艺大赛亚军</span>
+                    <span class="honor-title" data-i18n="honor.h9">第十八届首都高校"风采之星"才艺大赛 亚军</span>
                 </div>
                 <div class="honor-item">
                     <span class="honor-year">2021</span>
-                    <span class="honor-title">第十二届蓝桥杯C/C++组北京赛区三等奖</span>
+                    <span class="honor-title" data-i18n="honor.h10">第十二届蓝桥杯 C/C++ 组 北京赛区三等奖</span>
                 </div>
                 <div class="honor-item">
-                    <span class="honor-year">2022</span>
-                    <span class="honor-title">第八届"互联网＋"创新创业大赛北京赛区三等奖</span>
+                    <span class="honor-year">2020 – 2021</span>
+                    <span class="honor-title" data-i18n="honor.h11">中国传媒大学优秀团员</span>
                 </div>
                 <div class="honor-item">
-                    <span class="honor-year">2022</span>
-                    <span class="honor-title">北京冬奥会OBS奥运转播服务</span>
-                </div>
-                <div class="honor-item">
-                    <span class="honor-year">2022</span>
-                    <span class="honor-title">北京冬残奥会OBS奥运转播服务</span>
-                </div>
-                <div class="honor-item">
-                    <span class="honor-year">2023</span>
-                    <span class="honor-title">大学生创新创业实践良好结项</span>
+                    <span class="honor-year">2019 – 2020</span>
+                    <span class="honor-title" data-i18n="honor.h12">中国传媒大学优秀学生干部</span>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <!-- ========================================
+         生活照片
+         ======================================== -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="gallery.title">生活照片</h2>
-                <p>Photo Gallery</p>
+                <p data-i18n="gallery.sub">Photo Gallery</p>
             </div>
             <div class="gallery-scroll">
                 <div class="gallery-item">
-                    <img src="assets/images/1.jpg" alt="Photo 1">
+                    <img src="assets/images/1.jpg" alt="Photo 1" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/2.jpg" alt="Photo 2">
+                    <img src="assets/images/2.jpg" alt="Photo 2" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/3.jpg" alt="Photo 3">
+                    <img src="assets/images/3.jpg" alt="Photo 3" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/4.jpg" alt="Photo 4">
+                    <img src="assets/images/4.jpg" alt="Photo 4" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
 
+    <!-- ========================================
+         联系方式
+         ======================================== -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
                 <h2 data-i18n="contact.title">联系我</h2>
-                <p>Get in Touch</p>
+                <p data-i18n="contact.sub">Get in Touch</p>
             </div>
             <div class="contact-content">
-                <p data-i18n="contact.desc">
-                    欢迎与我讨论研究合作、学术交流，或潜在的就业机会。
-                    如有任何问题，请随时通过邮件联系我。
-                </p>
+                <p data-i18n="contact.desc">欢迎就科研合作、学术交流或工作机会与我联系，邮件是最快的方式。</p>
                 <div class="contact-links">
-                    <a href="mailto:oranduan@cuc.edu.cn">
+                    <a href="mailto:oran.duan@xgrids.com">
                         <i class="fas fa-envelope"></i>
-                        oranduan@cuc.edu.cn
+                        oran.duan@xgrids.com
                     </a>
-                    <a href="https://github.com/OranDuanStudy" target="_blank">
+                    <a href="https://github.com/OranDuanStudy" target="_blank" rel="noopener">
                         <i class="fab fa-github"></i>
                         GitHub
                     </a>
-                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank">
+                    <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank" rel="noopener">
                         <i class="fab fa-researchgate"></i>
                         ResearchGate
                     </a>
-                    <a href="https://www.instagram.com/oran_duan" target="_blank">
+                    <a href="https://www.instagram.com/oran_duan" target="_blank" rel="noopener">
                         <i class="fab fa-instagram"></i>
                         Instagram
                     </a>
@@ -402,15 +501,13 @@
     </section>
 
 
-
-
     <!-- ========================================
          页脚
          ======================================== -->
-        <footer>
+    <footer>
         <div class="visitor-counter">
             <i class="fas fa-eye"></i>
-            <span class="counter-label">Visits</span>
+            <span class="counter-label" data-i18n="footer.visits">访问量</span>
             <span class="counter-number">
                 <span id="busuanzi_container_site_pv">
                     <span id="busuanzi_value_site_pv"></span>
@@ -418,18 +515,16 @@
             </span>
         </div>
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <p>&copy; 2024 Oran Duan. Built with simplicity and passion.</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="https://github.com/OranDuanStudy" target="_blank">GitHub</a> |
-            <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank">ResearchGate</a>
+        <p>&copy; 2026 Oran Duan · <span data-i18n="footer.built">以简约与热爱构建</span></p>
+        <p class="footer-links">
+            <a href="https://github.com/OranDuanStudy" target="_blank" rel="noopener">GitHub</a> |
+            <a href="https://www.researchgate.net/profile/Oran-Duan" target="_blank" rel="noopener">ResearchGate</a>
         </p>
     </footer>
 
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-    <!-- chat-widget.js 已移除 -->
-    <!-- text-particles.js 已移除 (纯静态文字展示) -->
 
 </body>
 </html>

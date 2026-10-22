@@ -14,7 +14,7 @@
     padding: 1rem 0.5rem 1.5rem 0.5rem;
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
-    scrollbar-color: #667eea #f1f5f9;
+    scrollbar-color: var(--primary-color) var(--bg-dark);
 }
 
 .gallery-scroll::-webkit-scrollbar {
@@ -27,12 +27,12 @@
 }
 
 .gallery-scroll::-webkit-scrollbar-thumb {
-    background: #667eea;
+    background: var(--primary-color);
     border-radius: 4px;
 }
 
 .gallery-scroll::-webkit-scrollbar-thumb:hover {
-    background: #5a67d8;
+    background: #a78bfa;
 }
 
 .gallery-item {
@@ -45,7 +45,8 @@
     height: 380px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     cursor: pointer;
     display: block;

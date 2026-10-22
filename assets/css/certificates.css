@@ -1,71 +1,60 @@
 /* ========================================
-   证书展示模块样式 - Certificates Styles
+   荣誉奖项模块样式 - Honors Styles
    ======================================== */
 
 .certificates {
     background: var(--bg-light);
+    position: relative;
 }
 
+/* 自适应网格，替代原横向滚动，一屏即可浏览全部荣誉 */
 .honors-list {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    padding: 1rem calc(50% - 500px) 2rem;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) var(--bg-light);
-    -webkit-overflow-scrolling: touch;
-}
-
-.honors-list::-webkit-scrollbar {
-    height: 8px;
-}
-
-.honors-list::-webkit-scrollbar-track {
-    background: var(--bg-dark);
-    border-radius: 4px;
-}
-
-.honors-list::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
 }
 
 .honor-item {
-    flex: 0 0 280px;
-    max-width: 280px;
-    padding: 1.5rem;
+    padding: 1.1rem 1.2rem;
     background: var(--bg-white);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid var(--border-color);
     transition: all 0.3s;
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.1);
+    gap: 0.6rem;
+    box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.06);
 }
 
 .honor-item:hover {
     box-shadow: var(--shadow-glow);
-    border-color: var(--primary-color);
+    border-color: rgba(139, 92, 246, 0.6);
     transform: translateY(-3px);
 }
 
+/* 重点荣誉：暗红点缀 */
+.honor-item.highlight {
+    border-color: rgba(185, 28, 28, 0.45);
+    background: linear-gradient(135deg, rgba(127, 29, 29, 0.18), var(--bg-white) 60%);
+}
+
 .honor-year {
+    font-family: var(--font-mono);
     font-weight: 700;
-    color: #c4b5fd;
-    font-size: 0.9rem;
-    background: rgba(139, 92, 246, 0.15);
-    padding: 0.25rem 0.75rem;
+    color: var(--lilac);
+    font-size: 0.88rem;
+    letter-spacing: 0.5px;
+    background: rgba(139, 92, 246, 0.14);
+    padding: 0.1rem 0.7rem;
     border-radius: 20px;
     align-self: flex-start;
     border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.honor-item.highlight .honor-year {
+    color: #fecaca;
+    background: rgba(185, 28, 28, 0.2);
+    border-color: rgba(220, 38, 38, 0.45);
 }
 
 .honor-title {
@@ -74,15 +63,17 @@
     line-height: 1.5;
 }
 
-/* 响应式 */
 @media (max-width: 600px) {
-    .honor-item {
-        flex: 0 0 240px;
-        max-width: 240px;
-        padding: 1.25rem;
+    .honors-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
     }
 
-    .honors-list {
-        padding: 1rem 1rem 2rem;
+    .honor-item {
+        padding: 0.85rem 0.8rem;
+    }
+
+    .honor-title {
+        font-size: 0.86rem;
     }
 }
