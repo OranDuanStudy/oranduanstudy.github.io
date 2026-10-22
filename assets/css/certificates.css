@@ -39,7 +39,7 @@
 }
 
 .honor-year {
-    font-family: var(--font-mono);
+    font-variant-numeric: lining-nums tabular-nums;
     font-weight: 700;
     color: var(--lilac);
     font-size: 0.88rem;

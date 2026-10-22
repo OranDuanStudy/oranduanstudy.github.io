@@ -6,13 +6,13 @@
     <title>段傲然 Oran Duan | 个人主页</title>
     <meta name="description" content="段傲然 Oran Duan — 深度学习算法工程师 @ 其域创新 XGRIDS · 中国传媒大学 信号与信息处理 硕士。Deep Learning Algorithm Engineer at XGRIDS.">
     <meta name="theme-color" content="#07060b">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-    <!-- 字体：非阻塞加载，加载失败时回退到系统衬线字体 -->
+    <!-- 西文字体 Cinzel / EB Garamond 已本地托管（assets/fonts），中文标题字体从 Google Fonts 非阻塞加载，失败时回退系统字体 -->
+    <link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" media="print" onload="this.media='all'"
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap">
 
     <!-- Font Awesome 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -158,35 +158,36 @@
                         <img src="assets/images/logos/xgrids.png" alt="XGRIDS logo">
                     </div>
                     <div class="exp-body">
-                        <div class="exp-company" data-i18n="exp.xgrids.company">其域创新 XGRIDS</div>
-                        <div class="exp-role">
-                            <span data-i18n="exp.xgrids.role">深度学习算法工程师</span>
+                        <div class="exp-head">
+                            <span class="exp-company" data-i18n="exp.xgrids.company">其域创新 XGRIDS</span>
+                            <span class="exp-tag tag-fulltime" data-i18n="tag.fulltime">全职</span>
                         </div>
-                        <div class="exp-time"><span class="exp-tag tag-fulltime" data-i18n="tag.fulltime">全职</span> 2026.07 – <span data-i18n="time.present">至今</span></div>
+                        <div class="exp-role" data-i18n="exp.xgrids.role">深度学习算法工程师</div>
+                        <div class="exp-meta">
+                            <span class="exp-time">2026.07 – <span data-i18n="time.present">至今</span></span>
+                        </div>
                     </div>
                 </article>
 
                 <!-- 实习 -->
                 <div class="exp-group-label" data-i18n="exp.intern">实习</div>
-
                 <article class="exp-card">
                     <div class="exp-logo">
-                        <img src="assets/images/logos/zhipu.png" alt="Zhipu AI logo">
+                        <img src="assets/images/logos/zhipu.svg" alt="Zhipu AI logo">
                     </div>
                     <div class="exp-body">
-                        <div class="exp-company" data-i18n="exp.zhipu.company">智谱 Zhipu AI</div>
+                        <div class="exp-head">
+                            <span class="exp-company" data-i18n="exp.zhipu.company">智谱 Zhipu AI</span>
+                            <span class="exp-tag" data-i18n="tag.intern">实习</span>
+                        </div>
                         <ul class="exp-roles">
                             <li>
-                                <div class="exp-role">
-                                    <span data-i18n="exp.zhipu.role1">Agent 产品工程实习生</span>
-                                </div>
-                                <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2025.12 – 2026.03</div>
+                                <div class="exp-role" data-i18n="exp.zhipu.role1">Agent 产品工程实习生</div>
+                                <div class="exp-meta"><span class="exp-time">2025.12 – 2026.03</span></div>
                             </li>
                             <li>
-                                <div class="exp-role">
-                                    <span data-i18n="exp.zhipu.role2">数字人算法实习生</span>
-                                </div>
-                                <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2024.11 – 2025.11</div>
+                                <div class="exp-role" data-i18n="exp.zhipu.role2">数字人算法实习生</div>
+                                <div class="exp-meta"><span class="exp-time">2024.11 – 2025.11</span></div>
                             </li>
                         </ul>
                     </div>
@@ -194,15 +195,18 @@
 
                 <article class="exp-card">
                     <div class="exp-logo">
-                        <img src="assets/images/logos/migu.ico" alt="MIGU Video logo">
+                        <img src="assets/images/logos/migu.png" alt="MIGU Video logo">
                     </div>
                     <div class="exp-body">
-                        <div class="exp-company" data-i18n="exp.migu.company">咪咕视频 MIGU Video</div>
-                        <div class="exp-role">
-                            <span data-i18n="exp.migu.role">演播室赛事数据包装实习生</span>
+                        <div class="exp-head">
+                            <span class="exp-company" data-i18n="exp.migu.company">咪咕视频 MIGU Video</span>
+                            <span class="exp-tag" data-i18n="tag.intern">实习</span>
                         </div>
-                        <div class="exp-note" data-i18n="exp.migu.note">2024 巴黎奥运会</div>
-                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2024.08 – 2024.09</div>
+                        <div class="exp-role" data-i18n="exp.migu.role">演播室赛事数据包装实习生</div>
+                        <div class="exp-meta">
+                            <span class="exp-time">2024.08 – 2024.09</span>
+                            <span class="exp-note" data-i18n="exp.migu.note">2024 巴黎奥运会</span>
+                        </div>
                     </div>
                 </article>
 
@@ -211,26 +215,32 @@
                         <img src="assets/images/logos/obs.svg" alt="Olympic Broadcasting Services logo">
                     </div>
                     <div class="exp-body">
-                        <div class="exp-company" data-i18n="exp.obs.company">奥林匹克转播服务公司 OBS</div>
-                        <div class="exp-role">
-                            <span data-i18n="exp.obs.role">BTP 转播培训实习生 · 场馆联络官</span>
+                        <div class="exp-head">
+                            <span class="exp-company" data-i18n="exp.obs.company">奥林匹克转播服务公司 OBS</span>
+                            <span class="exp-tag" data-i18n="tag.intern">实习</span>
                         </div>
-                        <div class="exp-note" data-i18n="exp.obs.note">北京 2022 冬奥会 / 冬残奥会</div>
-                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2022.02 – 2022.04</div>
+                        <div class="exp-role" data-i18n="exp.obs.role">BTP 转播培训实习生 · 场馆联络官</div>
+                        <div class="exp-meta">
+                            <span class="exp-time">2022.02 – 2022.04</span>
+                            <span class="exp-note" data-i18n="exp.obs.note">北京 2022 冬奥会 / 冬残奥会</span>
+                        </div>
                     </div>
                 </article>
 
                 <article class="exp-card">
                     <div class="exp-logo logo-wide">
-                        <img src="assets/images/logos/ctvig.jpg" alt="China Television Industrial Group logo">
+                        <img src="assets/images/logos/ctvig.png" alt="China Television Industrial Group logo">
                     </div>
                     <div class="exp-body">
-                        <div class="exp-company" data-i18n="exp.ctvig.company">中视实业集团（央视）</div>
-                        <div class="exp-role">
-                            <span data-i18n="exp.ctvig.role">技术支持场记实习生</span>
+                        <div class="exp-head">
+                            <span class="exp-company" data-i18n="exp.ctvig.company">中视实业集团（央视）</span>
+                            <span class="exp-tag" data-i18n="tag.intern">实习</span>
                         </div>
-                        <div class="exp-note" data-i18n="exp.ctvig.note">东京奥运会 · 央视转播技术支持</div>
-                        <div class="exp-time"><span class="exp-tag" data-i18n="tag.intern">实习</span> 2021.07 – 2021.08</div>
+                        <div class="exp-role" data-i18n="exp.ctvig.role">技术支持场记实习生</div>
+                        <div class="exp-meta">
+                            <span class="exp-time">2021.07 – 2021.08</span>
+                            <span class="exp-note" data-i18n="exp.ctvig.note">东京奥运会 · 央视转播技术支持</span>
+                        </div>
                     </div>
                 </article>
             </aside>

@@ -23,11 +23,37 @@
     --shadow-glow: 0 0 22px rgba(139, 92, 246, 0.28);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 
-    /* 字体：拉丁字母用 Cinzel / Cormorant，中文用思源宋体，均有系统衬线回退 */
-    --font-display: 'Cinzel', 'Noto Serif SC', 'Songti SC', 'STSong', 'SimSun', serif;
-    --font-serif: 'EB Garamond', 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
-    --font-body: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
-    --font-mono: 'EB Garamond', 'Courier New', monospace;
+    /* 字体：西文 Cinzel / EB Garamond 本地托管（必定可用）；中文优先思源宋体，
+       加载不到时回退各系统宋体/雅黑，避免 Windows 落到点阵 SimSun */
+    --font-cjk: 'Noto Serif SC', 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', 'STSong', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    --font-display: 'Cinzel', var(--font-cjk);
+    --font-serif: 'EB Garamond', var(--font-cjk);
+    --font-body: 'EB Garamond', var(--font-cjk);
+}
+
+/* 本地字体（OFL 授权，Google Fonts 拉丁子集） */
+@font-face {
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url('../fonts/cinzel-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('../fonts/ebgaramond-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 400 800;
+    font-display: swap;
+    src: url('../fonts/ebgaramond-italic-latin.woff2') format('woff2');
 }
 
 /* 全局样式 */

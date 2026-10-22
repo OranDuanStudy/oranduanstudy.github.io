@@ -23,12 +23,12 @@
 │   │   ├── certificates.css  # 荣誉奖项
 │   │   ├── gallery.css       # 生活照片
 │   │   └── contact.css       # 联系方式
+│   ├── fonts/                # 本地托管的 Cinzel / EB Garamond（拉丁子集）
 │   ├── js/
 │   │   └── main.js           # 中英文翻译字典、语言切换、移动端菜单
 │   └── images/
 │       ├── DAR1.jpg          # 头像原图
 │       ├── DAR1-avatar.jpg   # 头像（裁剪压缩后，页面实际使用）
-│       ├── favicon.png       # 网站图标
 │       ├── logos/            # 学校 / 公司 logo
 │       └── ...               # 论文缩略图、生活照片
 └── src/, worker-single-file.js, wrangler.toml   # 聊天机器人后端（前端已不再引用）
