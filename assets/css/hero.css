@@ -28,11 +28,12 @@
 
 .hero-container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1380px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr) 350px;
-    gap: 2rem;
+    /* 经历栏加宽，保证「时间 · 地点」一行放下 */
+    grid-template-columns: 260px minmax(0, 1fr) 420px;
+    gap: 1.75rem;
     align-items: stretch;
     position: relative;
     z-index: 1;
@@ -520,7 +521,7 @@ html[data-lang="en"] .exp-tag {
    ======================================== */
 
 /* 中等屏幕：人物 + 介绍 两栏，经历横跨整行（两列卡片） */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .hero-container {
         grid-template-columns: 270px minmax(0, 1fr);
     }
@@ -579,5 +580,14 @@ html[data-lang="en"] .exp-tag {
 
     .hero-experience {
         grid-template-columns: 1fr;
+    }
+
+    /* 手机上卡片较窄：时间、地点各占一行，去掉分隔点 */
+    .exp-meta {
+        flex-direction: column;
+    }
+
+    .exp-note::before {
+        display: none;
     }
 }

@@ -59,10 +59,10 @@ const translations = {
         'exp.migu.note': '2024 巴黎奥运会',
         'exp.obs.company': '奥林匹克转播服务公司 OBS',
         'exp.obs.role': 'BTP 转播培训实习生 · 场馆联络官',
-        'exp.obs.note': '北京 2022 冬奥会 / 冬残奥会',
+        'exp.obs.note': '2022 北京冬奥会 / 冬残奥会',
         'exp.ctvig.company': '中视实业集团（央视）',
         'exp.ctvig.role': '技术支持场记实习生',
-        'exp.ctvig.note': '东京奥运会 · 央视转播技术支持',
+        'exp.ctvig.note': '2020 东京奥运会',
 
         // 学术成果
         'pub.title': '学术成果',
@@ -159,10 +159,10 @@ const translations = {
         'exp.migu.note': 'Paris 2024 Olympics',
         'exp.obs.company': 'Olympic Broadcasting Services (OBS)',
         'exp.obs.role': 'Broadcast Training Programme Intern · Venue Liaison Officer',
-        'exp.obs.note': 'Beijing 2022 Winter Olympics & Paralympics',
+        'exp.obs.note': 'Beijing 2022 Olympics & Paralympics',
         'exp.ctvig.company': 'China TV Industrial Group (CCTV)',
         'exp.ctvig.role': 'Technical Support Logger Intern',
-        'exp.ctvig.note': 'Tokyo 2020 Olympics · CCTV Broadcast Support',
+        'exp.ctvig.note': 'Tokyo 2020 Olympics',
 
         // Publications
         'pub.title': 'Publications',
